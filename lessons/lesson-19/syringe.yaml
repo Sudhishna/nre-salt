@@ -1,5 +1,5 @@
 ---
-lessonName: Working with REST APIs
+lessonName: Introduction to Salt
 lessonID: 19
 category: introductory
 topologyType: custom
@@ -40,11 +40,11 @@ connections:
   subnet: 10.31.0.0/24
 - a: vqfx1
   b: saltstack1
-  subnet: 10.1.0.0/24
+  subnet: 10.2.0.0/24
 
 stages:
   1:
-    description: Your First API Call
+    description: Basic Salt Architecture (Master and Minion)
     labguide: https://raw.githubusercontent.com/nre-learning/antidote/master/lessons/lesson-19/stage1/guide.md
     configs:
       vqfx1: stage1/configs/vqfx1.txt
