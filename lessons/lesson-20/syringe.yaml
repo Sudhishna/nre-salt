@@ -1,0 +1,17 @@
+---
+lessonName: Introduction to Junos
+lessonID: 20
+category: introductory
+topologyType: custom
+disabled: true
+
+devices:
+- name: vqfx1
+  image: antidotelabs/vqfxspeedy:snap1
+  sshuser: root
+  sshpassword: VR-netlab9
+
+stages:
+  1:
+    description: Your First Config Commit
+    labguide: https://raw.githubusercontent.com/nre-learning/antidote/master/lessons/lesson-19/stage1/guide.md
