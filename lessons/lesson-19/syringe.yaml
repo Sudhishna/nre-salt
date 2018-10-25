@@ -6,8 +6,8 @@ topologyType: custom
 lessondiagram: https://raw.githubusercontent.com/nre-learning/antidote/master/lessons/lesson-19/lessondiagram.png
 
 utilities:
-- name: linux1
-  image: antidotelabs/utility
+- name: saltstack1
+  image: antidotelabs/saltstack
   sshuser: antidote
   sshpassword: antidotepassword
 
@@ -39,7 +39,7 @@ connections:
   b: vqfx1
   subnet: 10.31.0.0/24
 - a: vqfx1
-  b: linux1
+  b: saltstack1
   subnet: 10.1.0.0/24
 
 stages:

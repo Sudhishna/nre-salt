@@ -1,5 +1,5 @@
-# Working with Network APIs
-## Part 1 - Your First API Call
+# Salt Stack
+## Part 1 - Setting up Salt Stack
 
 <!-- <div class="alert alert-warning" role="alert">
   This course comes with a video, and it's highly recommended that you watch this first. Click the "Lesson Video" button above to watch!
@@ -18,20 +18,22 @@ For this exercise, we'll be working with the [Junos REST API](https://www.junipe
 If you've ever worked on a Linux system, or maybe an Apple computer, you might have run into a command called `curl`. This is a simple tool for fetching the contents of a web page. A simple example would be to request the front page of `google.com`:
 
 ```
-curl https://google.com
+salt-master -d
 ```
-<!-- <button type="button" class="btn btn-primary btn-sm" onclick="runSnippetInTab('linux1', 0)">Run this snippet</button> -->
+<button type="button" class="btn btn-primary btn-sm" onclick="runSnippetInTab('saltstack1', 1)">Run this snippet</button>
 
 This is effectively the same as what your browser would do if you were to navigate to Google there - it requests a resource from the remote server, and the server responds with the HTML you see in your terminal. Of course, the intention is that the browser would then render this HTML into something we can look at. `curl` performs no such function, so we just get the raw HTML.
 
 What if, instead, we were to query a resource somewhere that wasn't even intended to be rendered visually in a browser? Remember, machines don't care what things "look" like, they just need the information in as efficient a manner as possible. If we add a few parameters, and change the URL, we can query a resource from one of our vQFX switches that fits this description:
 
 ```
-curl \
-    -u "root:VR-netlab9" \
-    http://vqfx1:8080/rpc/get-interface-information \
-    --header "Accept: application/json"
+salt-minion -d
 ```
-<button type="button" class="btn btn-primary btn-sm" onclick="runSnippetInTab('linux1', 1)">Run this snippet</button>
+<button type="button" class="btn btn-primary btn-sm" onclick="runSnippetInTab('saltstack1', 1)">Run this snippet</button>
 
 This output is a bit different than the first output. This isn't HTML at all - it's a very efficient format called JSON, or "Javascript Object Notation". It's the de-facto standard for the vast majority of REST APIs.
+
+```
+salt-keys -L
+```
+<button type="button" class="btn btn-primary btn-sm" onclick="runSnippetInTab('saltstack1', 1)">Run this snippet</button>
