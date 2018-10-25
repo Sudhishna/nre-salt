@@ -51,13 +51,13 @@ stages:
       vqfx2: stage1/configs/vqfx2.txt
       vqfx3: stage1/configs/vqfx3.txt
 
-  2:
-    description: Let's do it with Python!
-    labguide: https://raw.githubusercontent.com/nre-learning/antidote/master/lessons/lesson-19/stage2/guide.md
-    configs:
-      vqfx1: stage2/configs/vqfx1.txt
-      vqfx2: stage2/configs/vqfx2.txt
-      vqfx3: stage2/configs/vqfx3.txt
+  # 2:
+  #  description: Let's do it with Python!
+  #  labguide: https://raw.githubusercontent.com/nre-learning/antidote/master/lessons/lesson-19/stage2/guide.md
+  #  configs:
+  #    vqfx1: stage2/configs/vqfx1.txt
+  #    vqfx2: stage2/configs/vqfx2.txt
+  #    vqfx3: stage2/configs/vqfx3.txt
 
   # 3:
   #   description: Diving Deep into an API
